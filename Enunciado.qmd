@@ -375,3 +375,8 @@ por parte de los alumnos que estan motivados a estudiar más en sus
 casas. Las clases de repaso no solo constituyen una ayuda para
 comprender mejor las explicaciones de los profesores, sino también un
 gran soporte para que los alumnos estudien más en sus casas.
+
+### Bibliografia
+Se han usado los apuntes de la asignatura además de consultarse dudas en internet. \\
+
+https://datos.gob.es/es/catalogo/ea0010587-gasto-total-de-los-hogares-en-servicios-educativos-y-gasto-medio-por-hogar-segun-tipo-de-servicio-y-tamano-del-municipio-de-residencia-identificador-api-t13-p460-2019-l0-01011-px1
