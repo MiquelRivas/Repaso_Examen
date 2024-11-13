@@ -83,21 +83,26 @@ a alumnos que han tomado clases de repaso durante el curso académico
 # Variables Nominales
 
 Vamos a distinguir entre: 1-Género (masculino, femenino) 2-Curso (1ero
-Bach, 2ndo Bach) \# Variables Ordinales Distinguimos: 1-¿Cuánto te
-ayudaban las explicaciones de tu profesor de repaso? (Nada, Poco, Mucho)
-2-¿Estabas más motivado desde que tomaste clases de repaso? (Si, No)
+Bach, 2ndo Bach) \\
+Variables Ordinales Distinguimos: \\
+1-¿Cuánto te ayudaban las explicaciones de tu profesor de repaso? (Nada, Poco, Mucho)\\
+2-¿Estabas más motivado desde que tomaste clases de repaso? (Si, No)\\
 3-¿Crees que ampliaste tus conocimientos de las asignaturas en las que
-tomaste clases de refuerzo? (Si, No) \# Variables cuantitativas
-1-¿Cuántas horas le dedicabas a las clases de repaso en el curso?
+tomaste clases de refuerzo? (Si, No)  \\
+# Variables cuantitativas
+1-¿Cuántas horas le dedicabas a las clases de repaso en el curso? \\
 2-¿Cuántas horas semanales estudiabas en tu casa desde que empezaste en
-repaso? 3-¿Qué media llevabas antes de empezar las clases de repaso?
+repaso?  \\
+3-¿Qué media llevabas antes de empezar las clases de repaso? \\
 4-¿Con qué media acabaste el curso anterior después de las clases de
-repaso?
+repaso?\\
 
-Para generar los datos, vamos a dar unas explicaciones. \# Vector de
-medias 1-1 hora semanal, es decir 37 horas al curso 2-Supondremos que
-estudian unas 3 horas semanales 3-En base a mis alumnos, diremos que la
-media es de 4. 4-En base a mis alumnos, diremos que la media es de 6.
+Para generar los datos, vamos a dar unas explicaciones. \\
+# Vector de medias \
+1-1 hora semanal, es decir 37 horas al curso \\
+2-Supondremos que estudian unas 3 horas semanales \\
+3-Diremos que la media es de 4. \\
+4-Diremos que la media es de 6.
 
 ```{r}
 library(MASS)

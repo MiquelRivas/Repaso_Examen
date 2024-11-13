@@ -219,19 +219,19 @@ window.Quarto = {
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(rendimiento_estudiantil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sexo Curso Horas_repaso_años Estudio_semanal Notas_antes Notas_despues
-1    F  2BAT              51.5             5.8           6           6.8
-2    F  2BAT              30.4             1.4           2           3.6
-3    F  1BAT              37.7             3.0           2           4.4
-4    M  2BAT              31.5             2.8           4           4.9
-5    M  2BAT              36.9             2.7           2           5.2
-6    F  1BAT              46.9             3.8           4           7.3
+1    F  2BAT              42.0             3.9           4           6.5
+2    M  2BAT              42.3             3.5           3           6.2
+3    M  2BAT              36.3             1.3           4           3.7
+4    M  2BAT              38.6             3.4           3           4.0
+5    F  2BAT              35.5             2.6           4           6.0
+6    F  2BAT              29.2             1.7           4           5.0
   Ayuda_repaso Motivación Amppliar_conocimiento
 1         Nada         No                    Si
-2         Nada         No                    No
-3         Nada         Si                    No
-4         Poco         Si                    Si
-5         Poco         Si                    No
-6         Poco         No                    No</code></pre>
+2         Nada         Si                    No
+3         Nada         No                    Si
+4        Mucho         Si                    Si
+5         Nada         No                    No
+6         Nada         Si                    No</code></pre>
 </div>
 </div>
 <p>Para los datos de internet, los he obtenido del link que lleva a la página del ministerio, concretamente, son datos sobre: “Gasto total de los hogares en servicios educativos y gasto medio por hogar según tipo de servicio y tamaño del municipio de residencia”.</p>
@@ -274,13 +274,13 @@ window.Quarto = {
     Pearson's product-moment correlation
 
 data:  df_preg1$Horas_repaso_años and df_preg1$Estudio_semanal
-t = 15.315, df = 148, p-value &lt; 2.2e-16
+t = 14.22, df = 148, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.7121268 0.8381124
+ 0.6827547 0.8202452
 sample estimates:
       cor 
-0.7830245 </code></pre>
+0.7598716 </code></pre>
 </div>
 </div>
 <p>Concluimos que, efectivamente, las horas de repaso incentivan a los alumnos a estudiar en sus casas.</p>
@@ -335,13 +335,13 @@ sample estimates:
     Pearson's product-moment correlation
 
 data:  df_preg3$Horas_repaso_años and df_preg3$Mejora
-t = 1.2934, df = 148, p-value = 0.1979
+t = 1.1039, df = 148, p-value = 0.2714
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.05548075  0.26155087
+ -0.07092149  0.24705079
 sample estimates:
-      cor 
-0.1057208 </code></pre>
+       cor 
+0.09036715 </code></pre>
 </div>
 </div>
 <p>Efectivamente, la correlación es positiva y la pendiente de la recta de regresión también pero debemos de ser cautos a la hora de decir que si son elementos correlacionados ya que no es una correlación muy muy notoria.</p>
@@ -362,13 +362,13 @@ sample estimates:
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Mucho  Nada  Poco 
-   46    47    57 </code></pre>
+   59    44    47 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Mucho      Nada      Poco 
-0.3066667 0.3133333 0.3800000 </code></pre>
+0.3933333 0.2933333 0.3133333 </code></pre>
 </div>
 </div>
 <p>Los parametros en una distribución multinomial son las probabilidades anteriores. Por tanto, los estimadores son 0.3267, 0.3467, 0.3266.</p>
@@ -379,7 +379,7 @@ Mucho  Nada  Poco
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>probabilidad <span class="ot">&lt;-</span> <span class="fu">dmultinom</span>(subgrupo, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> probs)</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probabilidad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03029318</code></pre>
+<pre><code>[1] 0.03426304</code></pre>
 </div>
 </div>
 <p>La probabilidad es muy baja, es decir, no podemos afirmar la hipótesis del enunciado.</p>
@@ -406,38 +406,38 @@ lm(formula = rendimiento_estudiantil$Notas_despues ~ rendimiento_estudiantil$Not
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--2.26818 -0.62786  0.01723  0.57547  2.42364 
+-3.01078 -0.49793 -0.00972  0.64519  1.93365 
 
 Coefficients:
                                           Estimate Std. Error t value Pr(&gt;|t|)
-(Intercept)                                1.85227    0.54201   3.417 0.000819
-rendimiento_estudiantil$Notas_antes        0.53056    0.07117   7.454 7.35e-12
-rendimiento_estudiantil$Horas_repaso_años  0.04389    0.02039   2.153 0.032988
-rendimiento_estudiantil$Estudio_semanal    0.11929    0.09526   1.252 0.212492
+(Intercept)                                3.30493    0.56937   5.805 3.87e-08
+rendimiento_estudiantil$Notas_antes        0.51217    0.07942   6.449 1.55e-09
+rendimiento_estudiantil$Horas_repaso_años -0.02374    0.01979  -1.199    0.232
+rendimiento_estudiantil$Estudio_semanal    0.48174    0.10415   4.625 8.17e-06
                                              
 (Intercept)                               ***
 rendimiento_estudiantil$Notas_antes       ***
-rendimiento_estudiantil$Horas_repaso_años *  
-rendimiento_estudiantil$Estudio_semanal      
+rendimiento_estudiantil$Horas_repaso_años    
+rendimiento_estudiantil$Estudio_semanal   ***
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 0.9119 on 146 degrees of freedom
-Multiple R-squared:  0.5018,    Adjusted R-squared:  0.4916 
-F-statistic: 49.02 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
+Residual standard error: 0.9247 on 146 degrees of freedom
+Multiple R-squared:  0.447, Adjusted R-squared:  0.4357 
+F-statistic: 39.35 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>predicciones <span class="ot">&lt;-</span> <span class="fu">predict</span>(modelo, rendimiento_estudiantil)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ECM <span class="ot">&lt;-</span> <span class="fu">mean</span>((rendimiento_estudiantil<span class="sc">$</span>Notas_despues <span class="sc">-</span> predicciones)<span class="sc">^</span><span class="dv">2</span>) <span class="co">#Error cuadratico medio</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Error Cuadrático Medio:"</span>, ECM))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Error Cuadrático Medio: 0.809389079538292"</code></pre>
+<pre><code>[1] "Error Cuadrático Medio: 0.832211152692605"</code></pre>
 </div>
 </div>
 <p>Antes de interpretar el ECM, debemos calcular la varianza y ver si el error cuadrático medio es mucho menor que esta</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">149</span><span class="sc">/</span><span class="dv">150</span><span class="sc">*</span><span class="fu">var</span>(rendimiento_estudiantil<span class="sc">$</span>Notas_despues)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.624667</code></pre>
+<pre><code>[1] 1.505033</code></pre>
 </div>
 </div>
 <p>En este caso, el ECM es casi la mitad de la varianza, por tanto es demasiado alto, esto nos dice que puede haber errores en nuestra predicción.</p>
@@ -464,10 +464,10 @@ F-statistic: 49.02 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">hotelling.test</span>(grupo_NO, grupo_SI))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test stat:  0.47158 
+<pre><code>Test stat:  0.040331 
 Numerator df:  1 
 Denominator df:  148 
-P-value:  0.4933 </code></pre>
+P-value:  0.8411 </code></pre>
 </div>
 </div>
 <p>Notamos que, segun el p-valor que hemos obtenido, aceptamos la hipótesis nula, es decir, la media de las calificaciones de los alumnos que creen que han ampliado su conocimiento es igual a las de los que creen que no. Tendemos a pensar que ampliar conocimientos en una asignatura es directamente proporcional a sacar buenas calificaciones en esta. En este caso se muestra como la gente puede pensar que no se amplian sus conocimientos pero si sacan mejores calificaciones.</p>
