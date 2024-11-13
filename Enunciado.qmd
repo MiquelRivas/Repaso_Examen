@@ -97,6 +97,10 @@ head(rendimiento_estudiantil)
 ```
 
 
+Para los datos de internet, los he obtenido del link que lleva a la página del ministerio, concretamente, son datos sobre: "Gasto total de los hogares en servicios educativos y gasto medio por hogar según tipo de servicio y tamaño del municipio de residencia". 
+```{r}
+datos_internet<-read.csv("43476.csv")
+```
 
 
 ### Tercer paso
@@ -235,8 +239,8 @@ library(Hotelling)
 
 ```{r}
 # Filtrar los datos en dos grupos
-grupo_no <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "No", "Horas_repaso_años", drop = FALSE]
-grupo_si <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "Si", "Horas_repaso_años", drop = FALSE]
+grupo_NO <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "No", "Notas_despues", drop = FALSE]
+grupo_SI <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "Si", "Notas_despues", drop = FALSE]
 
 
 resultado_hotelling <- hotelling.test(grupo_nada, grupo_mucho)
@@ -245,7 +249,8 @@ resultado_hotelling <- hotelling.test(grupo_nada, grupo_mucho)
 print(resultado_hotelling)
 
 ```
-Aceptamos la hipótesis nula.
+Notamos que, segun el p-valor que hemos obtenido, aceptamos la hipótesis nula, es decir, la media de las calificaciones de los alumnos que creen que han ampliado su conocimiento es igual a las de los que creen que no. 
+Tendemos a pensar que ampliar conocimientos en una asignatura es directamente proporcional a sacar buenas calificaciones en esta. En este caso se muestra como la gente puede pensar que no se amplian sus conocimientos pero si sacan mejores calificaciones.
 
 
 
