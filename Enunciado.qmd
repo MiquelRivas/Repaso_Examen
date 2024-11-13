@@ -171,7 +171,7 @@ plot(df_preg1$Horas_repaso_años, df_preg1$Estudio_semanal,
      pch = 19, col = "blue")
 modelo_lineal <- lm(Estudio_semanal ~ Horas_repaso_años, data = df_preg1)
 
-# 3. Agregar la línea de regresión al gráfico
+#añadir regresion
 abline(modelo_lineal, col = "red", lwd = 2)
 cor.test(df_preg1$Horas_repaso_años, df_preg1$Estudio_semanal)
 ```
@@ -187,7 +187,7 @@ boxplot(Estudio_semanal ~ Motivación, data = rendimiento_estudiantil,
         main = "Estudio_semanal según Motivación",
         xlab = "Motivación",
         ylab = "Estudio Semanal",
-        col = c("lightblue", "lightgreen"))
+        col = c("blue", "green"))
 ```
 
 # Pregunta 3
@@ -250,11 +250,11 @@ Los parametros en una distribución multinomial son las probabilidades
 anteriores. Por tanto, los estimadores son 0.3267, 0.3467, 0.3266.
 
 ```{r}
-# Definir el vector con el conteo de estudiantes en cada categoría
-evento_interes <- c(Mucho = 7, Nada = 7, Poco = 6)
 
-# Calcular la probabilidad del evento de interés en una muestra de tamaño 20
-probabilidad_evento <- dmultinom(evento_interes, size = 20, prob = probs)
+subgrupo <- c(Mucho = 7, Nada = 7, Poco = 6)
+
+
+probabilidad <- dmultinom(subgrupo, size = 20, prob = probs)
 print(probabilidad_evento)
 
 ```
@@ -280,7 +280,7 @@ variables cuantitativas.
 ```{r}
 modelo <- lm(rendimiento_estudiantil$Notas_despues ~ rendimiento_estudiantil$Notas_antes + rendimiento_estudiantil$Horas_repaso_años + rendimiento_estudiantil$Estudio_semanal, data = rendimiento_estudiantil)
 
-# Paso 2: Ver el resumen del modelo para obtener los coeficientes y su significancia
+
 summary(modelo)
 predicciones <- predict(modelo, rendimiento_estudiantil)
 ECM <- mean((rendimiento_estudiantil$Notas_despues - predicciones)^2) #Error cuadratico medio

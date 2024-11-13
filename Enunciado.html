@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Taller evaluado de repaso para el Primer Parcial</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="Enunciado_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Enunciado_files/libs/quarto-html/quarto.js"></script>
+<script src="Enunciado_files/libs/quarto-html/popper.min.js"></script>
+<script src="Enunciado_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Enunciado_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Enunciado_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Enunciado_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Enunciado_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Enunciado_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Enunciado_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#miquel-rivas-vanrell" id="toc-miquel-rivas-vanrell" class="nav-link active" data-scroll-target="#miquel-rivas-vanrell">Miquel Rivas Vanrell</a></li>
+  <li><a href="#primer-paso" id="toc-primer-paso" class="nav-link" data-scroll-target="#primer-paso">Primer paso:</a></li>
+  <li><a href="#respuesta" id="toc-respuesta" class="nav-link" data-scroll-target="#respuesta">Respuesta</a></li>
+  <li><a href="#segundo-paso" id="toc-segundo-paso" class="nav-link" data-scroll-target="#segundo-paso">Segundo paso:</a></li>
+  <li><a href="#respuesta-1" id="toc-respuesta-1" class="nav-link" data-scroll-target="#respuesta-1">Respuesta</a></li>
+  <li><a href="#variables-nominales" id="toc-variables-nominales" class="nav-link" data-scroll-target="#variables-nominales">Variables Nominales</a>
+  <ul class="collapse">
+  <li><a href="#tercer-paso" id="toc-tercer-paso" class="nav-link" data-scroll-target="#tercer-paso">Tercer paso</a></li>
+  <li><a href="#respuesta-2" id="toc-respuesta-2" class="nav-link" data-scroll-target="#respuesta-2">Respuesta</a></li>
+  </ul></li>
+  <li><a href="#primera-pregunta" id="toc-primera-pregunta" class="nav-link" data-scroll-target="#primera-pregunta">Primera pregunta</a></li>
+  <li><a href="#pregunta-2" id="toc-pregunta-2" class="nav-link" data-scroll-target="#pregunta-2">Pregunta 2</a></li>
+  <li><a href="#pregunta-3" id="toc-pregunta-3" class="nav-link" data-scroll-target="#pregunta-3">Pregunta 3</a>
+  <ul class="collapse">
+  <li><a href="#cuarto-paso" id="toc-cuarto-paso" class="nav-link" data-scroll-target="#cuarto-paso">Cuarto paso</a></li>
+  <li><a href="#respuesta-3" id="toc-respuesta-3" class="nav-link" data-scroll-target="#respuesta-3">Respuesta</a></li>
+  <li><a href="#quinto-paso" id="toc-quinto-paso" class="nav-link" data-scroll-target="#quinto-paso">Quinto paso</a></li>
+  <li><a href="#respuesta-4" id="toc-respuesta-4" class="nav-link" data-scroll-target="#respuesta-4">Respuesta</a></li>
+  <li><a href="#sexto-paso" id="toc-sexto-paso" class="nav-link" data-scroll-target="#sexto-paso">Sexto paso</a></li>
+  <li><a href="#respuesta-5" id="toc-respuesta-5" class="nav-link" data-scroll-target="#respuesta-5">Respuesta</a></li>
+  <li><a href="#último-paso" id="toc-último-paso" class="nav-link" data-scroll-target="#último-paso">Último paso</a></li>
+  <li><a href="#respuesta-6" id="toc-respuesta-6" class="nav-link" data-scroll-target="#respuesta-6">Respuesta</a></li>
+  <li><a href="#bibliografia" id="toc-bibliografia" class="nav-link" data-scroll-target="#bibliografia">Bibliografia</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Taller evaluado de repaso para el Primer Parcial</h1>
+<p class="subtitle lead">20582- Análisis de Datos para el GMAT</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="miquel-rivas-vanrell" class="level3">
+<h3 class="anchored" data-anchor-id="miquel-rivas-vanrell">Miquel Rivas Vanrell</h3>
+<p>Elige un tema que te interese (finanzas, medio ambiente, educación, cine, entre otros). En este taller, aplicarás los pasos del método científico (ver sección 1.1 de los apuntes de la asignatura) para abordar, con datos simulados, una problemática relacionada con el tema elegido. Deberás presentar un informe de tu proyecto siguiendo la estructura detallada en el documento “Recomendaciones para escribir informes de proyectos en Estadística,” que se encuentra en la sección “Práctica” de la página del curso en Aula Digital.</p>
+</section>
+<section id="primer-paso" class="level3">
+<h3 class="anchored" data-anchor-id="primer-paso">Primer paso:</h3>
+<p>Define los objetivos de tu trabajo: Describe la hipótesis general que deseas investigar y especifica los objetivos específicos necesarios para validar o refutar dicha hipótesis.</p>
+</section>
+<section id="respuesta" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta">Respuesta</h3>
+<p>Desde hace unos años doy clase de repaso de matemáticas, física y química a alumnos de ESO y Bachiller y muchas veces me pregunto si mis clases sirven de algo o si es útil tener un profesor de repaso. La respuesta parece obvia, si no fuesen útiles las clases de repaso, nadie las solicitaría. Aún así, creo que esta respuesta no es del todo correcta. Siempre he pensado y he dicho a mis alumnos que las dos horas semanales en las que damos repaso no son suficientes para aprobar una asignatura y que son ellos los que deben hacer el mayor esfuerzo estudiando en su casa. Entonces, más bien la pregunta es: ¿Son los profesores de repaso una ayuda real para los alumnos o simplemente un apoyo y una motivación para que los jóvenes estudien en sus casas?</p>
+</section>
+<section id="segundo-paso" class="level3">
+<h3 class="anchored" data-anchor-id="segundo-paso">Segundo paso:</h3>
+<p>Define las variables clave para probar tu hipótesis. Asegúrate de incluir al menos cuatro variables cuantitativas, tres ordinales y dos nominales. Indica las unidades de medida para las variables cuantitativas y los niveles para las variables nominales y ordinales. A continuación, simula los datos en R de acuerdo a las siguientes pautas:</p>
+<ul>
+<li><strong>Tabla 1</strong>: Genera una tabla con al menos 100 observaciones y las variables definidas en el paso anterior, asegurate que las variables cuantitativas sigan una distribución normal multivariante. A continuación, te presento un ejemplo que simula datos de una encuesta aplicada a estudiantes de secundaria sobre sus hábitos de estudio y rendimiento y que incluye información sobre su contexto de vida, como horas de sueño y tiempo de traslado a la escuela. Este ejemplo no lo debes usar en tu proyecto, solo es para darte una idea de lo que te pido hacer.</li>
+<li><strong>Tabla 2</strong>: Consigue algunos datos en Internet que puedas utilizar para ayudar a resolver tu problema (una variable o dos basta), algunas ideas de dónde buscar son: <a href="https://datos.gob.es/es/">datos abiertos del Gobierno de España</a>, <a href="https://www.ine.es/ss/Satellite?L=0&amp;c=Page&amp;cid=1259942408928&amp;p=1259942408928&amp;pagename=ProductosYServicios%2FPYSLayout">INE</a>, <a href="https://www.kaggle.com/">Kaggle</a>, etc.</li>
+</ul>
+<p>Une ambas tablas utilizando un identificador simulado en una base de datos única. Emplea las funciones del paquete tidyverse explicadas en la sección 1.7.5 de los apuntes de la asignatura. Esta parte es opcional, pero te permitirá enriquecer tu base de datos y realizar análisis más completos.</p>
+</section>
+<section id="respuesta-1" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-1">Respuesta</h3>
+<p>Por la forma en la que se hacen las preguntas, se supone que se encuesta a alumnos que han tomado clases de repaso durante el curso académico 23/24.</p>
+</section>
+<section id="variables-nominales" class="level1">
+<h1>Variables Nominales</h1>
+<p>Vamos a distinguir entre: 1-Género (masculino, femenino) 2-Curso (1ero Bach, 2ndo Bach) # Variables Ordinales Distinguimos: 1-¿Cuánto te ayudaban las explicaciones de tu profesor de repaso? (Nada, Poco, Mucho) 2-¿Estabas más motivado desde que tomaste clases de repaso? (Si, No) 3-¿Crees que ampliaste tus conocimientos de las asignaturas en las que tomaste clases de refuerzo? (Si, No) # Variables cuantitativas 1-¿Cuántas horas le dedicabas a las clases de repaso en el curso? 2-¿Cuántas horas semanales estudiabas en tu casa desde que empezaste en repaso? 3-¿Qué media llevabas antes de empezar las clases de repaso? 4-¿Con qué media acabaste el curso anterior después de las clases de repaso?</p>
+<p>Para generar los datos, vamos a dar unas explicaciones. # Vector de medias 1-1 hora semanal, es decir 37 horas al curso 2-Supondremos que estudian unas 3 horas semanales 3-En base a mis alumnos, diremos que la media es de 4. 4-En base a mis alumnos, diremos que la media es de 6.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>medias <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">37</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">6</span>)  </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>covarianza <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">40</span>, <span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">4</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">6</span>, <span class="fl">1.5</span>, <span class="fl">0.6</span>, <span class="fl">0.8</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">3</span>, <span class="fl">0.6</span>, <span class="fl">1.2</span>, <span class="fl">0.9</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                       <span class="dv">4</span>, <span class="fl">0.8</span>, <span class="fl">0.9</span>, <span class="fl">1.6</span>), </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">nrow =</span> <span class="dv">4</span>, <span class="at">ncol =</span> <span class="dv">4</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>datos<span class="ot">&lt;-</span> <span class="fu">mvrnorm</span>(<span class="dv">150</span>, <span class="at">mu =</span> medias, <span class="at">Sigma =</span> covarianza)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Limitar y ajustar valores de promedio_calificaciones a escala 1-10</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>datos[,<span class="dv">4</span>] <span class="ot">&lt;-</span> <span class="fu">pmin</span>(<span class="fu">pmax</span>(<span class="fu">round</span>(datos[,<span class="dv">4</span>], <span class="dv">1</span>), <span class="dv">1</span>), <span class="dv">10</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Tabla 1 con los datos </span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>rendimiento_estudiantil <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sexo =</span> <span class="fu">ordered</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">150</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">labels =</span> <span class="fu">c</span>( <span class="st">"F"</span>, <span class="st">"M"</span>)),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">Curso =</span> <span class="fu">ordered</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">150</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">labels =</span> <span class="fu">c</span>( <span class="st">"1BAT"</span>, <span class="st">"2BAT"</span>)),</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  Horas_repaso_años <span class="ot">=</span> <span class="fu">round</span>(datos[,<span class="dv">1</span>], <span class="dv">1</span>),</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">Estudio_semanal =</span> <span class="fu">round</span>(datos[,<span class="dv">2</span>], <span class="dv">1</span>),</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">Notas_antes =</span> <span class="fu">round</span>(datos[,<span class="dv">3</span>]),</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">Notas_despues =</span> datos[,<span class="dv">4</span>],</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ayuda_repaso =</span> <span class="fu">sample</span>(<span class="fu">c</span>(<span class="st">"Nada"</span>, <span class="st">"Poco"</span>, <span class="st">"Mucho"</span>), <span class="dv">150</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>  Motivación <span class="ot">=</span> <span class="fu">ordered</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">150</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">labels =</span> <span class="fu">c</span>( <span class="st">"No"</span>, <span class="st">"Si"</span>)),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  <span class="at">Amppliar_conocimiento =</span> <span class="fu">ordered</span>(<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="dv">150</span>, <span class="at">replace =</span> <span class="cn">TRUE</span>), <span class="at">labels =</span> <span class="fu">c</span>( <span class="st">"No"</span>, <span class="st">"Si"</span>))</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(rendimiento_estudiantil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  Sexo Curso Horas_repaso_años Estudio_semanal Notas_antes Notas_despues
+1    M  2BAT              42.5             3.9           5           7.4
+2    M  1BAT              29.9             1.2           1           2.6
+3    M  2BAT              40.4             1.5           3           4.0
+4    M  1BAT              39.1             2.6           5           7.4
+5    F  2BAT              34.2             2.5           3           4.5
+6    M  2BAT              42.6             2.0           4           5.5
+  Ayuda_repaso Motivación Amppliar_conocimiento
+1         Nada         Si                    No
+2         Poco         Si                    Si
+3        Mucho         No                    Si
+4         Nada         Si                    Si
+5        Mucho         No                    No
+6        Mucho         No                    Si</code></pre>
+</div>
+</div>
+<p>Para los datos de internet, los he obtenido del link que lleva a la página del ministerio, concretamente, son datos sobre: “Gasto total de los hogares en servicios educativos y gasto medio por hogar según tipo de servicio y tamaño del municipio de residencia”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>datos_internet<span class="ot">&lt;-</span><span class="fu">read.csv</span>(<span class="st">"43476.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="tercer-paso" class="level3">
+<h3 class="anchored" data-anchor-id="tercer-paso">Tercer paso</h3>
+<p>Realiza un análisis descriptivo multivariantes de tu base de datos de acuerdo a los objetivos de tu trabajo. Describe lo observado en el contexto del problema.</p>
+<p>Para las variables cuantitativas de tu base de datos, calcula e interpreta la información que proporciona la varianza generalizada y la varianza total</p>
+</section>
+<section id="respuesta-2" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-2">Respuesta</h3>
+<p>Vamos a tratar básciamente dos preguntas. 1-Cuantas más horas de repaso anuales, ¿más estudian los alumnos en sus casas? 2-¿La motivación hace que los alumnos estudien más? 3-¿Los alumnos que van más horas a repaso mejoran sus calificaciones?</p>
+</section>
+</section>
+<section id="primera-pregunta" class="level1">
+<h1>Primera pregunta</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df_preg1 <span class="ot">&lt;-</span> rendimiento_estudiantil[, <span class="fu">c</span>(<span class="st">"Horas_repaso_años"</span>, <span class="st">"Estudio_semanal"</span>)]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_preg1<span class="sc">$</span>Horas_repaso_años, df_preg1<span class="sc">$</span>Estudio_semanal, </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Relación entre horas de repaso y horas de estudio en casa"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Horas de Repaso"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Horas de Estudio en Casa"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>modelo_lineal <span class="ot">&lt;-</span> <span class="fu">lm</span>(Estudio_semanal <span class="sc">~</span> Horas_repaso_años, <span class="at">data =</span> df_preg1)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Agregar la línea de regresión al gráfico</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(modelo_lineal, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Enunciado_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(df_preg1<span class="sc">$</span>Horas_repaso_años, df_preg1<span class="sc">$</span>Estudio_semanal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  df_preg1$Horas_repaso_años and df_preg1$Estudio_semanal
+t = 15.242, df = 148, p-value &lt; 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.7102877 0.8370015
+sample estimates:
+      cor 
+0.7815805 </code></pre>
+</div>
+</div>
+<p>Concluimos que, efectivamente, las horas de repaso incentivan a los alumnos a estudiar en sus casas.</p>
+</section>
+<section id="pregunta-2" class="level1">
+<h1>Pregunta 2</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df_preg2 <span class="ot">&lt;-</span> rendimiento_estudiantil[, <span class="fu">c</span>(<span class="st">"Motivación"</span>, <span class="st">"Estudio_semanal"</span>)]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">boxplot</span>(Estudio_semanal <span class="sc">~</span> Motivación, <span class="at">data =</span> rendimiento_estudiantil,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">"Estudio_semanal según Motivación"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">"Motivación"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">"Estudio Semanal"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"lightblue"</span>, <span class="st">"lightgreen"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Enunciado_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="pregunta-3" class="level1">
+<h1>Pregunta 3</h1>
+<p>El hecho de mejorar las calificaciones lo entendemos como que la diferencia entre las notas a fin de curso y a principio sea positiva. Lo que haremos será, una nueva columna que se llame “Mejora” y sea Notas_despues-Notas_Antes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Mejora<span class="ot">&lt;-</span> rendimiento_estudiantil<span class="sc">$</span>Notas_despues <span class="sc">-</span> rendimiento_estudiantil<span class="sc">$</span>Notas_antes</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df_preg3 <span class="ot">&lt;-</span> rendimiento_estudiantil[, <span class="fu">c</span>(<span class="st">"Horas_repaso_años"</span>, <span class="st">"Notas_despues"</span>, <span class="st">"Notas_antes"</span>)]</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>df_preg3<span class="sc">$</span>Mejora<span class="ot">&lt;-</span>Mejora</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Ahora, realizamos el test en cuestión:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_preg3<span class="sc">$</span>Horas_repaso_años, df_preg3<span class="sc">$</span>Mejora, </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Relación entre horas de repaso y la mejora en las calificaciones"</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Horas de Repaso"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Mejora"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">pch =</span> <span class="dv">19</span>, <span class="at">col =</span> <span class="st">"blue"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>modelo_lineal <span class="ot">&lt;-</span> <span class="fu">lm</span>(Mejora <span class="sc">~</span> Horas_repaso_años, <span class="at">data =</span> df_preg3)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Agregar la línea de regresión al gráfico</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(modelo_lineal, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Enunciado_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(df_preg3<span class="sc">$</span>Horas_repaso_años, df_preg3<span class="sc">$</span>Mejora)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  df_preg3$Horas_repaso_años and df_preg3$Mejora
+t = 0.97865, df = 148, p-value = 0.3294
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.08111873  0.23739606
+sample estimates:
+       cor 
+0.08018522 </code></pre>
+</div>
+</div>
+<p>Efectivamente, la correlación es positiva y la pendiente de la recta de regresión también pero debemos de ser cautos a la hora de decir que si son elementos correlacionados ya que no es una correlación muy muy notoria.</p>
+<section id="cuarto-paso" class="level3">
+<h3 class="anchored" data-anchor-id="cuarto-paso">Cuarto paso</h3>
+<p>Selecciona una de las variables no cuantitativas y modelízala con una distribución multinomial, debes estimar sus parámetros. Utiliza el modelo para calcular la probabilidad de que ocurra un evento de interés en una muestra de tamaño 20, relevante para tu problema.</p>
+</section>
+<section id="respuesta-3" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-3">Respuesta</h3>
+<p>Vamos a considerar la variable Ayuda_Repaso que tiene como posibles respuestas Nada, Poco, Mucho.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular las frecuencias de cada categoría</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>frecuencias <span class="ot">&lt;-</span> <span class="fu">table</span>(rendimiento_estudiantil<span class="sc">$</span>Ayuda_repaso)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convertir a proporciones (probabilidades)</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>probs <span class="ot">&lt;-</span> <span class="fu">prop.table</span>(frecuencias)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>frecuencias</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Mucho  Nada  Poco 
+   58    52    40 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Mucho      Nada      Poco 
+0.3866667 0.3466667 0.2666667 </code></pre>
+</div>
+</div>
+<p>Los parametros en una distribución multinomial son las probabilidades anteriores. Por tanto, los estimadores son 0.3267, 0.3467, 0.3266.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Definir el vector con el conteo de estudiantes en cada categoría</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>evento_interes <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="at">Mucho =</span> <span class="dv">7</span>, <span class="at">Nada =</span> <span class="dv">7</span>, <span class="at">Poco =</span> <span class="dv">6</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular la probabilidad del evento de interés en una muestra de tamaño 20</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>probabilidad_evento <span class="ot">&lt;-</span> <span class="fu">dmultinom</span>(evento_interes, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> probs)</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probabilidad_evento)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.03719505</code></pre>
+</div>
+</div>
+<p>La probabilidad es muy baja, es decir, no podemos afirmar la hipótesis del enunciado.</p>
+</section>
+<section id="quinto-paso" class="level3">
+<h3 class="anchored" data-anchor-id="quinto-paso">Quinto paso</h3>
+<p>Con las variables cuantitativas de tu base de datos, ajusta un modelo de regresión multivariante en la forma:</p>
+<p><span class="math display">\[Y=\beta_0+\beta_1 X_1+ \cdots + \beta_p X_p + \epsilon\]</span> Donde <span class="math inline">\(Y\)</span> es la variable cuantitativa que deseas explicar en función del resto de variables cuantitativas registradas. Además, calcula la función de score e interpreta su resultado en el contexto del problema.</p>
+</section>
+<section id="respuesta-4" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-4">Respuesta</h3>
+<p>Vamos a ver como depende las notas al final de curso de las otras variables cuantitativas.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(rendimiento_estudiantil<span class="sc">$</span>Notas_despues <span class="sc">~</span> rendimiento_estudiantil<span class="sc">$</span>Notas_antes <span class="sc">+</span> rendimiento_estudiantil<span class="sc">$</span>Horas_repaso_años <span class="sc">+</span> rendimiento_estudiantil<span class="sc">$</span>Estudio_semanal, <span class="at">data =</span> rendimiento_estudiantil)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Paso 2: Ver el resumen del modelo para obtener los coeficientes y su significancia</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = rendimiento_estudiantil$Notas_despues ~ rendimiento_estudiantil$Notas_antes + 
+    rendimiento_estudiantil$Horas_repaso_años + rendimiento_estudiantil$Estudio_semanal, 
+    data = rendimiento_estudiantil)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.60917 -0.57305 -0.00384  0.63291  2.18471 
+
+Coefficients:
+                                          Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept)                                2.15711    0.58971   3.658 0.000354
+rendimiento_estudiantil$Notas_antes        0.58901    0.07745   7.605  3.2e-12
+rendimiento_estudiantil$Horas_repaso_años  0.02853    0.02086   1.368 0.173431
+rendimiento_estudiantil$Estudio_semanal    0.09664    0.11154   0.866 0.387685
+                                             
+(Intercept)                               ***
+rendimiento_estudiantil$Notas_antes       ***
+rendimiento_estudiantil$Horas_repaso_años    
+rendimiento_estudiantil$Estudio_semanal      
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.9609 on 146 degrees of freedom
+Multiple R-squared:  0.4256,    Adjusted R-squared:  0.4138 
+F-statistic: 36.06 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>predicciones <span class="ot">&lt;-</span> <span class="fu">predict</span>(modelo, rendimiento_estudiantil)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ECM <span class="ot">&lt;-</span> <span class="fu">mean</span>((rendimiento_estudiantil<span class="sc">$</span>Notas_despues <span class="sc">-</span> predicciones)<span class="sc">^</span><span class="dv">2</span>) <span class="co">#Error cuadratico medio</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Error Cuadrático Medio:"</span>, ECM))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Error Cuadrático Medio: 0.898671536670346"</code></pre>
+</div>
+</div>
+<p>Antes de interpretar el ECM, debemos calcular la varianza y ver si el error cuadrático medio es mucho menor que esta</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">149</span><span class="sc">/</span><span class="dv">150</span><span class="sc">*</span><span class="fu">var</span>(rendimiento_estudiantil<span class="sc">$</span>Notas_despues)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.564633</code></pre>
+</div>
+</div>
+<p>En este caso, el ECM es casi la mitad de la varianza, por tanto es demasiado alto, esto nos dice que puede haber errores en nuestra predicción.</p>
+<p>Aún así, basandonos en los resultados: Nnotemos que lo más influyente es las notas a inicio de curso seguido de las horas de estudio semanal y finalmente las horas de repaso, (además con errores relativamente bajos), lo que nos dice que solo acudir a clases de repaso no tiene influencia sobre la calificación final. Notemos que el p-valor es muy bajo, por tanto, hay efecto entre las variables.</p>
+</section>
+<section id="sexto-paso" class="level3">
+<h3 class="anchored" data-anchor-id="sexto-paso">Sexto paso</h3>
+<p>Realiza un contraste de hipótesis de dos medias multivariante que sea relevante para tu problema. Por ejemplo, podrías evaluar si el vector de medias de la variable cuantitativa de interés <span class="math inline">\(Y\)</span> es el mismo para dos niveles distintos de la variable no cuantitativa que modelaste como multinomial en el paso anterior. Ejecuta el contraste tanto teóricamente como con la función hotelling.test en R. Escribe la conclusión del contraste en el contexto de tu problema.</p>
+</section>
+<section id="respuesta-5" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-5">Respuesta</h3>
+<p>Debemos seleccionar las notas a fin de curso con si creen que han ampliado su conocimiento, es decir.(Lo haremos solo con las respuestas nada y mucho)</p>
+<p>Ahora, planteamos el test de hipótesis con hipótesis nula, tienen la misma media.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(Hotelling)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Cargando paquete requerido: corpcor</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>grupo_NO <span class="ot">&lt;-</span> rendimiento_estudiantil[rendimiento_estudiantil<span class="sc">$</span>Amppliar_conocimiento <span class="sc">==</span> <span class="st">"No"</span>, <span class="st">"Notas_despues"</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>grupo_SI <span class="ot">&lt;-</span> rendimiento_estudiantil[rendimiento_estudiantil<span class="sc">$</span>Amppliar_conocimiento <span class="sc">==</span> <span class="st">"Si"</span>, <span class="st">"Notas_despues"</span>, drop <span class="ot">=</span> <span class="cn">FALSE</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">hotelling.test</span>(grupo_NO, grupo_SI))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Test stat:  0.14492 
+Numerator df:  1 
+Denominator df:  148 
+P-value:  0.704 </code></pre>
+</div>
+</div>
+<p>Notamos que, segun el p-valor que hemos obtenido, aceptamos la hipótesis nula, es decir, la media de las calificaciones de los alumnos que creen que han ampliado su conocimiento es igual a las de los que creen que no. Tendemos a pensar que ampliar conocimientos en una asignatura es directamente proporcional a sacar buenas calificaciones en esta. En este caso se muestra como la gente puede pensar que no se amplian sus conocimientos pero si sacan mejores calificaciones.</p>
+</section>
+<section id="último-paso" class="level3">
+<h3 class="anchored" data-anchor-id="último-paso">Último paso</h3>
+<p>Recuerda que:</p>
+<ul>
+<li><p>De acuerdo con las recomendaciones para redactar informes de proyectos en Estadística, tu informe debe incluir conclusiones, recomendaciones y bibliografía.</p></li>
+<li><p>Crea un repositorio en GitHub para tu proyecto y asegúrate de añadir en el encabezado YAML la siguiente opción necesaria para la renderización sin problemas:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>Rendering<span class="sc">:</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    embed<span class="sc">-</span>resources<span class="sc">:</span> true</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>¡Buena suerte y disfruta del proceso!</p>
+</section>
+<section id="respuesta-6" class="level3">
+<h3 class="anchored" data-anchor-id="respuesta-6">Respuesta</h3>
+<p>En conclusión, según esta muestra generada aleatoriamente sobre las clases de repaso podemos concluir que hay una relación clara entre la mejoría de califiaciones por parte de los alumnos que acuden a clase y por parte de los alumnos que estan motivados a estudiar más en sus casas. Las clases de repaso no solo constituyen una ayuda para comprender mejor las explicaciones de los profesores, sino también un gran soporte para que los alumnos estudien más en sus casas.</p>
+</section>
+<section id="bibliografia" class="level3">
+<h3 class="anchored" data-anchor-id="bibliografia">Bibliografia</h3>
+<p>Se han usado los apuntes de la asignatura además de consultarse dudas en internet. \</p>
+<p>https://datos.gob.es/es/catalogo/ea0010587-gasto-total-de-los-hogares-en-servicios-educativos-y-gasto-medio-por-hogar-segun-tipo-de-servicio-y-tamano-del-municipio-de-residencia-identificador-api-t13-p460-2019-l0-01011-px1</p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
