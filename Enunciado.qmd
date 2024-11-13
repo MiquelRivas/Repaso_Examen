@@ -226,7 +226,26 @@ Realiza un contraste de hipótesis de dos medias multivariante que sea relevante
 
 
 ###Respuesta
+Debemos seleccionar las notas a fin de curso con si creen que han ampliado su conocimiento, es decir.(Lo haremos solo con las respuestas nada y mucho)
 
+Ahora, planteamos el test de hipótesis con hipótesis nula, tienen la misma media.
+```{r}
+library(Hotelling)
+```
+
+```{r}
+# Filtrar los datos en dos grupos
+grupo_no <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "No", "Horas_repaso_años", drop = FALSE]
+grupo_si <- rendimiento_estudiantil[rendimiento_estudiantil$Amppliar_conocimiento == "Si", "Horas_repaso_años", drop = FALSE]
+
+
+resultado_hotelling <- hotelling.test(grupo_nada, grupo_mucho)
+
+
+print(resultado_hotelling)
+
+```
+Aceptamos la hipótesis nula.
 
 
 
@@ -251,6 +270,7 @@ Rendering:
 
 ###Respuesta
 
-
+En conclusión, según esta muestra generada aleatoriamente sobre las clases de repaso podemos concluir que hay una relación clara entre la mejoría de califiaciones por parte de los alumnos que acuden a clase y por parte de los alumnos que estan motivados a estudiar más en sus casas. 
+Las clases de repaso no solo constituyen una ayuda para comprender mejor las explicaciones de los profesores, sino también un gran soporte para que los alumnos estudien más en sus casas. 
 
 
