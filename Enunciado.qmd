@@ -255,7 +255,7 @@ subgrupo <- c(Mucho = 7, Nada = 7, Poco = 6)
 
 
 probabilidad <- dmultinom(subgrupo, size = 20, prob = probs)
-print(probabilidad_evento)
+print(probabilidad)
 
 ```
 
