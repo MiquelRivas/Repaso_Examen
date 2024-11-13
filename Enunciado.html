@@ -184,8 +184,9 @@ window.Quarto = {
 </section>
 <section id="variables-nominales" class="level1">
 <h1>Variables Nominales</h1>
-<p>Vamos a distinguir entre: 1-Género (masculino, femenino) 2-Curso (1ero Bach, 2ndo Bach) # Variables Ordinales Distinguimos: 1-¿Cuánto te ayudaban las explicaciones de tu profesor de repaso? (Nada, Poco, Mucho) 2-¿Estabas más motivado desde que tomaste clases de repaso? (Si, No) 3-¿Crees que ampliaste tus conocimientos de las asignaturas en las que tomaste clases de refuerzo? (Si, No) # Variables cuantitativas 1-¿Cuántas horas le dedicabas a las clases de repaso en el curso? 2-¿Cuántas horas semanales estudiabas en tu casa desde que empezaste en repaso? 3-¿Qué media llevabas antes de empezar las clases de repaso? 4-¿Con qué media acabaste el curso anterior después de las clases de repaso?</p>
-<p>Para generar los datos, vamos a dar unas explicaciones. # Vector de medias 1-1 hora semanal, es decir 37 horas al curso 2-Supondremos que estudian unas 3 horas semanales 3-En base a mis alumnos, diremos que la media es de 4. 4-En base a mis alumnos, diremos que la media es de 6.</p>
+<p>Vamos a distinguir entre: 1-Género (masculino, femenino) 2-Curso (1ero Bach, 2ndo Bach) \ Variables Ordinales Distinguimos: \ 1-¿Cuánto te ayudaban las explicaciones de tu profesor de repaso? (Nada, Poco, Mucho)\ 2-¿Estabas más motivado desde que tomaste clases de repaso? (Si, No)\ 3-¿Crees que ampliaste tus conocimientos de las asignaturas en las que tomaste clases de refuerzo? (Si, No) \ # Variables cuantitativas 1-¿Cuántas horas le dedicabas a las clases de repaso en el curso? \ 2-¿Cuántas horas semanales estudiabas en tu casa desde que empezaste en repaso? \ 3-¿Qué media llevabas antes de empezar las clases de repaso? \ 4-¿Con qué media acabaste el curso anterior después de las clases de repaso?\</p>
+<p>Para generar los datos, vamos a dar unas explicaciones. \ # Vector de medias<br>
+1-1 hora semanal, es decir 37 horas al curso \ 2-Supondremos que estudian unas 3 horas semanales \ 3-Diremos que la media es de 4. \ 4-Diremos que la media es de 6.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -219,19 +220,19 @@ window.Quarto = {
 <span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(rendimiento_estudiantil)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  Sexo Curso Horas_repaso_años Estudio_semanal Notas_antes Notas_despues
-1    F  2BAT              42.0             3.9           4           6.5
-2    M  2BAT              42.3             3.5           3           6.2
-3    M  2BAT              36.3             1.3           4           3.7
-4    M  2BAT              38.6             3.4           3           4.0
-5    F  2BAT              35.5             2.6           4           6.0
-6    F  2BAT              29.2             1.7           4           5.0
+1    F  2BAT              38.7             4.0           4           4.6
+2    F  1BAT              40.4             4.4           7           7.2
+3    F  1BAT              34.2             1.3           4           5.2
+4    M  2BAT              40.9             3.5           5           7.5
+5    F  1BAT              35.2             1.3           3           5.7
+6    M  2BAT              34.2             2.9           4           5.2
   Ayuda_repaso Motivación Amppliar_conocimiento
-1         Nada         No                    Si
-2         Nada         Si                    No
-3         Nada         No                    Si
-4        Mucho         Si                    Si
+1         Nada         No                    No
+2        Mucho         No                    No
+3        Mucho         No                    No
+4         Poco         No                    No
 5         Nada         No                    No
-6         Nada         Si                    No</code></pre>
+6         Poco         No                    No</code></pre>
 </div>
 </div>
 <p>Para los datos de internet, los he obtenido del link que lleva a la página del ministerio, concretamente, son datos sobre: “Gasto total de los hogares en servicios educativos y gasto medio por hogar según tipo de servicio y tamaño del municipio de residencia”.</p>
@@ -274,13 +275,13 @@ window.Quarto = {
     Pearson's product-moment correlation
 
 data:  df_preg1$Horas_repaso_años and df_preg1$Estudio_semanal
-t = 14.22, df = 148, p-value &lt; 2.2e-16
+t = 15.876, df = 148, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.6827547 0.8202452
+ 0.7258232 0.8463526
 sample estimates:
       cor 
-0.7598716 </code></pre>
+0.7937541 </code></pre>
 </div>
 </div>
 <p>Concluimos que, efectivamente, las horas de repaso incentivan a los alumnos a estudiar en sus casas.</p>
@@ -335,13 +336,13 @@ sample estimates:
     Pearson's product-moment correlation
 
 data:  df_preg3$Horas_repaso_años and df_preg3$Mejora
-t = 1.1039, df = 148, p-value = 0.2714
+t = 1.6184, df = 148, p-value = 0.1077
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- -0.07092149  0.24705079
+ -0.02900486  0.28608515
 sample estimates:
-       cor 
-0.09036715 </code></pre>
+      cor 
+0.1318696 </code></pre>
 </div>
 </div>
 <p>Efectivamente, la correlación es positiva y la pendiente de la recta de regresión también pero debemos de ser cautos a la hora de decir que si son elementos correlacionados ya que no es una correlación muy muy notoria.</p>
@@ -362,13 +363,13 @@ sample estimates:
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Mucho  Nada  Poco 
-   59    44    47 </code></pre>
+   41    54    55 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Mucho      Nada      Poco 
-0.3933333 0.2933333 0.3133333 </code></pre>
+0.2733333 0.3600000 0.3666667 </code></pre>
 </div>
 </div>
 <p>Los parametros en una distribución multinomial son las probabilidades anteriores. Por tanto, los estimadores son 0.3267, 0.3467, 0.3266.</p>
@@ -379,7 +380,7 @@ Mucho  Nada  Poco
 <span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>probabilidad <span class="ot">&lt;-</span> <span class="fu">dmultinom</span>(subgrupo, <span class="at">size =</span> <span class="dv">20</span>, <span class="at">prob =</span> probs)</span>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(probabilidad)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.03426304</code></pre>
+<pre><code>[1] 0.02887522</code></pre>
 </div>
 </div>
 <p>La probabilidad es muy baja, es decir, no podemos afirmar la hipótesis del enunciado.</p>
@@ -406,38 +407,38 @@ lm(formula = rendimiento_estudiantil$Notas_despues ~ rendimiento_estudiantil$Not
 
 Residuals:
      Min       1Q   Median       3Q      Max 
--3.01078 -0.49793 -0.00972  0.64519  1.93365 
+-2.47990 -0.72062 -0.05844  0.69871  2.71167 
 
 Coefficients:
                                           Estimate Std. Error t value Pr(&gt;|t|)
-(Intercept)                                3.30493    0.56937   5.805 3.87e-08
-rendimiento_estudiantil$Notas_antes        0.51217    0.07942   6.449 1.55e-09
-rendimiento_estudiantil$Horas_repaso_años -0.02374    0.01979  -1.199    0.232
-rendimiento_estudiantil$Estudio_semanal    0.48174    0.10415   4.625 8.17e-06
+(Intercept)                                1.99524    0.54731   3.646  0.00037
+rendimiento_estudiantil$Notas_antes        0.54700    0.07585   7.211 2.77e-11
+rendimiento_estudiantil$Horas_repaso_años  0.02905    0.01961   1.481  0.14072
+rendimiento_estudiantil$Estudio_semanal    0.18377    0.10083   1.823  0.07042
                                              
 (Intercept)                               ***
 rendimiento_estudiantil$Notas_antes       ***
 rendimiento_estudiantil$Horas_repaso_años    
-rendimiento_estudiantil$Estudio_semanal   ***
+rendimiento_estudiantil$Estudio_semanal   .  
 ---
 Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
-Residual standard error: 0.9247 on 146 degrees of freedom
-Multiple R-squared:  0.447, Adjusted R-squared:  0.4357 
-F-statistic: 39.35 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
+Residual standard error: 1.014 on 146 degrees of freedom
+Multiple R-squared:  0.4863,    Adjusted R-squared:  0.4757 
+F-statistic: 46.07 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>predicciones <span class="ot">&lt;-</span> <span class="fu">predict</span>(modelo, rendimiento_estudiantil)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>ECM <span class="ot">&lt;-</span> <span class="fu">mean</span>((rendimiento_estudiantil<span class="sc">$</span>Notas_despues <span class="sc">-</span> predicciones)<span class="sc">^</span><span class="dv">2</span>) <span class="co">#Error cuadratico medio</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Error Cuadrático Medio:"</span>, ECM))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "Error Cuadrático Medio: 0.832211152692605"</code></pre>
+<pre><code>[1] "Error Cuadrático Medio: 1.00056313546278"</code></pre>
 </div>
 </div>
 <p>Antes de interpretar el ECM, debemos calcular la varianza y ver si el error cuadrático medio es mucho menor que esta</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="dv">149</span><span class="sc">/</span><span class="dv">150</span><span class="sc">*</span><span class="fu">var</span>(rendimiento_estudiantil<span class="sc">$</span>Notas_despues)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 1.505033</code></pre>
+<pre><code>[1] 1.94772</code></pre>
 </div>
 </div>
 <p>En este caso, el ECM es casi la mitad de la varianza, por tanto es demasiado alto, esto nos dice que puede haber errores en nuestra predicción.</p>
@@ -464,10 +465,10 @@ F-statistic: 39.35 on 3 and 146 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">hotelling.test</span>(grupo_NO, grupo_SI))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Test stat:  0.040331 
+<pre><code>Test stat:  1.5102 
 Numerator df:  1 
 Denominator df:  148 
-P-value:  0.8411 </code></pre>
+P-value:  0.2211 </code></pre>
 </div>
 </div>
 <p>Notamos que, segun el p-valor que hemos obtenido, aceptamos la hipótesis nula, es decir, la media de las calificaciones de los alumnos que creen que han ampliado su conocimiento es igual a las de los que creen que no. Tendemos a pensar que ampliar conocimientos en una asignatura es directamente proporcional a sacar buenas calificaciones en esta. En este caso se muestra como la gente puede pensar que no se amplian sus conocimientos pero si sacan mejores calificaciones.</p>
